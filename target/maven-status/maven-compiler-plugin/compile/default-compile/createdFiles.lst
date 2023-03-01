@@ -1,4 +1,2 @@
 Service\Userservice.class
-Controller\user.class
-databaseconnection\DBConnection.class
 Model\Student.class

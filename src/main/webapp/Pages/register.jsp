@@ -4,24 +4,33 @@
     Author     : nitro 5
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register Page</title>
-    </head>
-    <body>
-        <form action="user?page=register" method="post">
-            <label for="Username">Username:</label><br>
-            <input type="text" name="Username"><br>
-            <label for="Password">Password:</label><br>
-            <input type="password" name="Password"><br>
-            <label for="Fullname">Fullname</label><br>
-            <input type="text" name="Fullname"><br>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-            <input type="submit" value="Submit">
-            <a href=""> Back TO Login</a>
-        </form>
-    </body>
+    
+</head>
+<body>
+<div class="container">
+    <form action="user?page=register" method="post">
+        <input type="hidden" name="page" value="REGISTER"></input>
+        <div class="form-group">
+            <label for="UserName">UserName</label>
+            <input type="text" name="username" class="form-control" id="UserName" placeholder="Enter your UserName ">
+        </div>
+        <div class="form-group">
+            <label for="Full Name">Full Name:</label>
+            <input type="text" name="fullname" class="form-control" id="Full Name" placeholder="Enter your Full Name">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Enter your Password">
+        </div>
+        <input type="submit" class="btn btn-success" value="Register">
+        <a href="user?page=index">Already a Member GO TO Login </a>
+    </form>
+</div>
+</body>
 </html>
